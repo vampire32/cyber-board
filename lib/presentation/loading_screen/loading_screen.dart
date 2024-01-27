@@ -1,0 +1,10 @@
+import 'models/loading_model.dart';import 'package:flutter/material.dart';import 'package:invovision_s_application1/core/app_export.dart';import 'provider/loading_provider.dart';class LoadingScreen extends StatefulWidget {const LoadingScreen({Key? key}) : super(key: key);
+
+@override LoadingScreenState createState() =>  LoadingScreenState();
+
+static Widget builder(BuildContext context) { return ChangeNotifierProvider(create: (context) => LoadingProvider(), child: LoadingScreen()); } 
+ }
+class LoadingScreenState extends State<LoadingScreen> {@override void initState() { super.initState();Future.delayed(const Duration(milliseconds: 3000), (){
+NavigatorService.popAndPushNamed(AppRoutes.menuScreen, );}); } 
+@override Widget build(BuildContext context) { return SafeArea(child: Scaffold(body: SizedBox(width: double.maxFinite, child: SingleChildScrollView(child: SizedBox(height: SizeUtils.height, width: double.maxFinite, child: Stack(alignment: Alignment.bottomRight, children: [Align(alignment: Alignment.center, child: Container(decoration: BoxDecoration(image: DecorationImage(image: AssetImage(ImageConstant.imgGroup783), fit: BoxFit.cover)), child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [SizedBox(height: 54.v), CustomImageView(imagePath: ImageConstant.img3123, height: 183.v, width: 180.h, alignment: Alignment.centerRight), SizedBox(height: 59.v), SizedBox(height: 343.v, width: 290.h, child: Stack(alignment: Alignment.center, children: [Align(alignment: Alignment.topRight, child: Padding(padding: EdgeInsets.only(top: 12.v, right: 71.h), child: Text("lbl_loading".tr, style: theme.textTheme.titleLarge))), CustomImageView(imagePath: ImageConstant.img1123, height: 343.v, width: 290.h, alignment: Alignment.center)]))]))), CustomImageView(imagePath: ImageConstant.img2123, height: 136.v, width: 120.h, alignment: Alignment.bottomRight), CustomImageView(imagePath: ImageConstant.img44604571, height: 305.v, width: 203.h, alignment: Alignment.topLeft)])))))); } 
+ }
